@@ -1,0 +1,66 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+$background-color : #efffff;
+
+@mixin timeline-border-style {
+	border:1px solid #bbb;
+	border-radius:5px;
+	background-color:#fbfbfb;
+}
+
+@mixin tweet-style {
+	margin:2px 5px;
+	padding:2px 5px;
+	border:1px solid #aaa;
+	border-radius:3px;
+	background-color:#f8ffff;
+}
+
+@mixin tweet-box{
+	&:hover{background-color:#eff4f4;}
+	.user {font-weight:bold;}
+	.delete{
+		color:#888;
+		float:right;
+		margin-left:3px;
+		cursor:pointer;
+	}
+	.text{margin:0;  font-size:12px;}
+	.time{ color:#888; font-size:11px;}
+	@include tweet-style;
+}
+
+body {
+  background-color: $background-color;
+}
+
+section{
+  margin-top:30px;
+}
+
+#compose {
+  text-align:right;
+  textarea { width:100%;}
+}
+
+#timeline {
+	ul{
+	  margin:0;
+	  padding:2px 0;
+	  list-style:none;
+	  height:200px;
+	}
+	@include timeline-border-style;
+}
+.tweet {
+	@include tweet-box;
+}
+
+.tweet-mentioned{
+	@include tweet-box;
+	border:2px dotted; 
+}
+
