@@ -7,4 +7,4 @@ http://thesassway.com/beginner/getting-started-with-sass-and-compass
 http://elneco.biz/use-compass-and-sass-to-minify-your-css/
 
 To minify the CSS when deploy your app in production, just run:  
-compass compile -e production --force
+`compass compile -e production --force`
